@@ -1,0 +1,114 @@
+@model EvaluationModel
+
+@* Generated from Custom Template. *@
+@* Model namespace using directive should be added to _ViewImports.cshtml. *@
+
+@{
+    var containerDivClass = "container";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Evaluation Delete</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        h3 {
+            color: #dc3545;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+        .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-outline-danger:hover {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+        .fw-bold {
+            font-weight: bold;
+        }
+        .text-danger {
+            color: #dc3545 !important;
+        }
+        .row {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+@if (Model is not null)
+{
+<div class="@containerDivClass">
+    @if (TempData["Message"] is not null)
+    {
+    <p class="text-danger">
+        @TempData["Message"]
+    </p>
+    }
+    <h3>Are you sure you want to delete?</h3>
+    <hr />
+    <div class="row">
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Title)
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Title)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Score)
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Score)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Date)
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Date)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.Description)
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Description)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.User)
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.User)
+        </div>
+    </div>
+
+    <hr />
+    <form asp-action="Delete">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Record.Id" />
+        <input type="submit" value="Yes" class="btn btn-danger" />&nbsp;&nbsp;
+        <a asp-action="Index" class="btn btn-outline-danger">No</a>
+    </form>
+</div>
+}
+</body>
+</html>

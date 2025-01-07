@@ -1,0 +1,14 @@
+/Users/buse/Desktop/EZEvaluation/BLL/bin/Debug/net8.0/BLL.deps.json
+/Users/buse/Desktop/EZEvaluation/BLL/bin/Debug/net8.0/BLL.dll
+/Users/buse/Desktop/EZEvaluation/BLL/bin/Debug/net8.0/BLL.pdb
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.csproj.AssemblyReference.cache
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.GeneratedMSBuildEditorConfig.editorconfig
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.AssemblyInfoInputs.cache
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.AssemblyInfo.cs
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.csproj.CoreCompileInputs.cache
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.dll
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/refint/BLL.dll
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.pdb
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/ref/BLL.dll
+/Users/buse/Desktop/EZEvaluation/BLL/bin/Debug/net8.0/BLL.runtimeconfig.json
+/Users/buse/Desktop/EZEvaluation/BLL/obj/Debug/net8.0/BLL.genruntimeconfig.cache

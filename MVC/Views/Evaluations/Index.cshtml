@@ -1,0 +1,46 @@
+@model IEnumerable<BLL.Models.EvaluationModel>
+@{
+ViewData["Title"] = "Evaluations";
+}
+
+<h2>Evaluations</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Score</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Evaluated</th>
+        <th>User</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var evaluation in Model)
+    {
+    <tr>
+        <td>@evaluation.Title</td>
+        <td>@evaluation.Score</td>
+        <td>@evaluation.Date</td>
+        <td>@evaluation.Description</td>
+        <td>@evaluation.Evaluateds</td>
+        <td>@evaluation.User</td>
+        <td>
+            <a asp-action="Details" asp-route-id="@evaluation.Record.Id">Details</a> |
+            @if (User.Identity.IsAuthenticated)
+            {
+            <a asp-action="Edit" asp-route-id="@evaluation.Record.Id">Edit</a> 
+            }
+            @if (User.IsInRole("Admin"))
+            {
+            <a asp-action="Delete" asp-route-id="@evaluation.Record.Id">Delete</a>
+            }
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Create New</a>

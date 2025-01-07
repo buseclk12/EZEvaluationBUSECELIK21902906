@@ -1,0 +1,42 @@
+@model BLL.Models.EvaluationModel
+
+@{
+    ViewData["Title"] = "Create Evaluation";
+}
+
+<h2>Create Evaluation</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Record.Title"></label>
+        <input asp-for="Record.Title" class="form-control" />
+        <span asp-validation-for="Record.Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Record.Score"></label>
+        <input asp-for="Record.Score" class="form-control" />
+        <span asp-validation-for="Record.Score" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Record.Date"></label>
+        <input asp-for="Record.Date" type="date" class="form-control" />
+        <span asp-validation-for="Record.Date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Record.Description"></label>
+        <textarea asp-for="Record.Description" class="form-control"></textarea>
+        <span asp-validation-for="Record.Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Record.UserId" class="control-label"></label>
+        <select asp-for="Record.UserId" class="form-control" asp-items="ViewBag.UserIds"></select>
+        <span asp-validation-for="Record.UserId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SelectedEvaluatedIds">Evaluateds</label>
+        <select asp-for="SelectedEvaluatedIds" class="form-control" asp-items="ViewBag.EvaluatedIds" multiple></select>
+        <span asp-validation-for="SelectedEvaluatedIds" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

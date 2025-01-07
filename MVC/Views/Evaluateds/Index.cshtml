@@ -1,0 +1,27 @@
+@model IEnumerable<BLL.Models.EvaluatedModel>
+
+@{
+ViewData["Title"] = "Evaluateds";
+}
+
+<h2>Evaluateds</h2>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Surname</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var evaluated in Model)
+    {
+    <tr>
+        <td>@evaluated.Name</td>
+        <td>@evaluated.Surname</td>
+    </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Create New</a>
